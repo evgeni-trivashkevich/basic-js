@@ -8,7 +8,7 @@ Object.freeze(expect);
 Object.freeze(assert);
 
 describe('Extended repeater', () => {
-  // Presence requirement
+  // Presence requirement 
 
   describe('variable presence', () => {
     it.optional('function repeater exists', () => {
