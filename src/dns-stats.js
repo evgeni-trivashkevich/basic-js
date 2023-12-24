@@ -26,8 +26,6 @@ function getDNSStats(domains) {
   const result = {};
   const arrDomains = domains.forEach(element => { 
     const arrStr = element.split('.');
-    // ['code', 'yandex', 'ru']
-    // reverse
     arrStr.reverse();
     arrStr.forEach((str, index) => {
       const newArr = arrStr.slice(0, index+1);

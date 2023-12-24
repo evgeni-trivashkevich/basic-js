@@ -21,17 +21,8 @@ function getCommonCharacterCount(s1, s2) {
         if (arr1[i] === arr2[j]) {
           result += arr1[i];
           hasFound = true;
-          console.log('result', result);
-          console.log('arr1 befot', arr1);
-          console.log('arr2 befor', arr2);
-
-
           arr1.splice(i, 1);
           arr2.splice(j, 1);
-          console.log('arr1 aftor', arr1);
-          console.log('arr2 after', arr2);
-
-
           break;
         } 
         

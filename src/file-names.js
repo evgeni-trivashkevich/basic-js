@@ -19,30 +19,17 @@ function renameFiles(names = []) {
   if (names.length <= 0){
     return [];
   }
-  // let uniqueNames = new Set(names);
-  // let countNames = {};
-
-
-
-    let result = [names[0]];
-    for (let i = 1 ; i < names.length; i++) {
-      // let kolleter = 1;
-      // find all by pattern name[i](*)
-      let hasName = result.filter((item) => item === names[i] || (item === names[i]+'(1)'));
-      let kolleter = hasName.length;
-      if (kolleter > 0) {
-        result.push(`${names[i]}(${kolleter})`);
-      // let str = `${names[i]}(${kolleter})`;
-      //   while(result.includes(str)) {
-      //     kolleter+=1;
-      //     str = `${names[i]}(${kolleter})`;
-      //   }
-      //   result[result.length-1] = `${names[i]}(${kolleter-1})`;
-      } else {
-        result.push(names[i]);
-      }
+  let result = [names[0]];
+  for (let i = 1 ; i < names.length; i++) {
+    let hasName = result.filter((item) => item === names[i] || (item === names[i]+'(1)'));
+    let kolleter = hasName.length;
+    if (kolleter > 0) {
+      result.push(`${names[i]}(${kolleter})`);
+    } else {
+      result.push(names[i]);
     }
-    return result;
+  }
+  return result;
 }
 
 module.exports = {
